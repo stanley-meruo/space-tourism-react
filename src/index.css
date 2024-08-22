@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    background-color: hsl(220, 33%, 9%);
+    padding: 0;
+    min-height: 100vh;
+}
+
+#home{
+    background-image: url('./assets/home/background-home-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+
+#destination{
+    background-image: url('./assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+
+#crew{
+    background-image: url('./assets/crew/background-crew-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+
+#technology{
+    background-image: url('./assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+}
+
+@media (max-width: 1023px){
+  #home{
+    background-image: url('./assets/home/background-home-tablet.jpg');
+}
+
+  #destination{
+    background-image: url('./assets/destination/background-destination-tablet.jpg');
+}
+  #crew{
+    background-image: url('./assets/crew/background-crew-tablet.jpg');
+}
+  #technology{
+    background-image: url('./assets/technology/background-technology-tablet.jpg');
+}
+}
+
+@media (max-width: 620px){
+    #home{
+    background-image: url('./assets/home/background-home-mobile.jpg');
+    }
+    #destination{
+    background-image: url('./assets/destination/background-destination-mobile.jpg');
+}
+    #crew{
+    background-image: url('./assets/crew/background-crew-mobile.jpg');
+}
+    #technology{
+    background-image: url('./assets/technology/background-technology-mobile.jpg');
+}
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.05); 
+  backdrop-filter: blur(15px); 
+}
+
+.name {
+  position: relative;
+  display: inline-block;
+}
+
+.name::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: hsl(225, 54%, 88%);
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.name-active::after,
+.name:hover::after {
+  transform: scaleX(1);
+}
+
+.name-active::after{
+  background-color: white;
+}
+
+.active-content{
+  display: flex;
+}
+
+.inactive-content{
+  display:none;
+}
+
+.inactive-page{
+  border-radius: 50%;
+  border: solid 1px hsl(0, 0%, 100%, 0.25);
+  background-color: transparent;
+  color:white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inactive-page:hover{
+  border: solid 1px white;
+}
+
+.active-page{
+  background-color: white;
+  color: hsl(220, 33%, 9%);
+}
+
+.link {
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -27px; 
+  width: 100%; 
+  height: 2px;
+  background-color: hsl(0, 0%, 100%, 0.25);
+  opacity: 0; 
+  transition: opacity 0.2s ease; 
+}
+
+.link:hover::after, .link:focus::after {
+  opacity: 1;
+  background-color: hsl(0, 0%, 100%, 0.25);
+}
+
+ .link-active::after, .link-active:hover::after {
+  opacity: 1;
+  background-color: white; 
+}
+
+
+@media (max-width: 1440px){
+.nav-line{
+    width:435px;
+}
+}
+
+@media (max-width: 1300px){
+.nav-line{
+    display:none;
+}
+}
+
+@media (min-width: 1440px){
+.nav-line{
+    width:585px;
+}
+}
+
+@media (max-width: 620px){
+.link::after {
+  content: "";
+  position: absolute;
+  left: -23px;
+  bottom: 0; 
+  width: 2px ; 
+  height: 100%;
+  background-color: hsl(0, 0%, 100%, 0.25);
+  opacity: 0; 
+  transition: opacity 0.2s ease; 
+}
+
+.link:hover::after, .link:focus::after {
+  opacity: 1;
+  background-color: hsl(0, 0%, 100%, 0.25);
+}
+
+ .link-active::after, .link-active:hover::after {
+  opacity: 1;
+  background-color: white; 
+}
+
+}
+
+.rotate-img img {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
