@@ -1,6 +1,6 @@
 # Frontend Mentor - Space Tourism Website
 
-<!-- This is a Space Tourist Website from Frontend Mentor challenges which help me improve my coding skills by building realistic projects with React
+This is a Space Tourist Website from Frontend Mentor challenges which help me improve my coding skills built with React
 
 
 ## Table of contents
@@ -13,21 +13,20 @@
 
                 This is a desktop View.
                  
-<img src="https://github.com/stanley-meruo/main/space-tourism/src/assets/space-tourism-challenge-desktop.png">
+<img src="src/assets/space-tourism-challenge-desktop.png">
 
                  This is a mobile view.
                  
   <p align="center">
-   <img src="https://github.com/stanley-meruo/main/space-tourism/src/assets/space-tourism-challenge-mobile.png" height="500px">
+   <img src="src/assets/space-tourism-challenge-mobile.png" height="450px">
   </p>
   
 ### Links
 
--
+- [Demo](https://space-tourism-react-gamma.vercel.app)
 
 ### Built with
 
 - Tailwind CSS
 - [React](https://reactjs.org/) - JS library
 - React Router
-- Vite config -->
